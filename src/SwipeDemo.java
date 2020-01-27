@@ -34,11 +34,7 @@ public class SwipeDemo extends Base{
 		WebElement second = driver.findElementByXPath("//*[@content-desc='45']");
 		
 		TouchAction t = new TouchAction(driver);
-		t.longPress(longPressOptions().withElement(element(first)).withDuration(ofSeconds(2))).moveTo(element(second)).release().perform();
-		
-		
-		
-		
+		t.longPress(longPressOptions().withElement(element(first)).withDuration(ofSeconds(2))).moveTo(element(second)).release().perform();	
 		
 		
 		
