@@ -15,7 +15,7 @@ import static java.time.Duration.ofSeconds;
 
 public class Gestures extends Base {
 
-	public static void main(String[] args) throws MalformedURLException {
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
 		
 		
 		AndroidDriver<AndroidElement> driver = capabilities();
@@ -35,7 +35,9 @@ public class Gestures extends Base {
 		WebElement peopleNames = driver.findElementByAndroidUIAutomator("text(\"People Names\")");
 		t.longPress(longPressOptions().withElement(element(peopleNames)).withDuration(ofSeconds(2))).release().perform();
 		
-		
+		Thread.sleep(2000);
+		System.out.println(driver.findElementById("android:id/alertTitle").isDisplayed());
+
 
 	}
 
