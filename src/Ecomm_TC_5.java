@@ -15,9 +15,12 @@ import org.openqa.selenium.WebElement;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.android.nativekey.AndroidKey;
+import io.appium.java_client.android.nativekey.KeyEvent;
 
 /*
  * Tap and Long Press on the check out screen, then visit to the browser
+ * Perform operation in the Web browser
  */
 
 public class Ecomm_TC_5 extends Base 
@@ -75,6 +78,10 @@ public class Ecomm_TC_5 extends Base
 		driver.findElement(By.name("q")).sendKeys("Manas Saxena");
 		driver.findElement(By.xpath("//button[@aria-label='Google Search']")).click();
 		
+//		Navigate back to Native App
+		driver.pressKey(new KeyEvent(AndroidKey.BACK));
+		driver.context("NATIVE_APP");
+		System.out.println("Back to the native app");
 		
 		
 		

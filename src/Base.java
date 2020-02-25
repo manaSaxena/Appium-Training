@@ -15,8 +15,8 @@ public class Base {
  
 		File f = new File("APP");
 		
-		File fs = new File(f,"General-Store.apk");
-//		File fs = new File(f,"ApiDemos-debug.apk");
+//		File fs = new File(f,"General-Store.apk");
+		File fs = new File(f,"ApiDemos-debug.apk");
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
 //		Lenovo K4 NOTE - SSWS4DNR4SZPQWRW
